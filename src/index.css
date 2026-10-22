@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F8F7F4;
+  --ink: #1A1A1A;
+  --accent: #B38B3F;
+  --emerald: #1B4332;
+  --ink-faint: rgba(26, 26, 26, 0.08);
+  --ink-medium: rgba(26, 26, 26, 0.6);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Mono', 'JetBrains Mono', monospace;
+  --font-urdu: 'Noto Nastaliq Urdu', 'Noto Sans Arabic', serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+.font-display,
+.font-editorial-serif {
+  font-family: var(--font-serif);
+}
+
+.font-label,
+.editorial-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.font-editorial-mono {
+  font-family: var(--font-mono);
+}
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  line-height: 1.9;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-urdu);
+  letter-spacing: normal;
+}
+
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] button {
+  font-family: var(--font-urdu);
+}
+
+[dir="rtl"] .font-mono,
+[dir="rtl"] .font-editorial-mono,
+[dir="rtl"] .tabular-nums {
+  font-family: var(--font-mono);
+  direction: ltr;
+  display: inline-block;
+}
+
+/* Editorial pill styling */
+.pill-editorial {
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  border: 1.5px solid var(--ink);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  background: transparent;
+  color: var(--ink);
+  transition: all 0.15s ease-in-out;
+}
+
+.pill-editorial:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.pill-editorial.active {
+  background: var(--ink);
+  color: #ffffff;
+}
+
+/* Editorial primary button */
+.btn-editorial-primary {
+  background: var(--ink);
+  color: var(--bg);
+  border: 1.5px solid var(--ink);
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-editorial-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Editorial secondary button */
+.btn-editorial-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  padding: 0.65rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-editorial-secondary:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+/* Crisp grid lines matching design Variation 2 */
+.editorial-grid {
+  display: grid;
+  background: var(--ink);
+  border: 1.5px solid var(--ink);
+  gap: 1.5px;
+}
+
+/* Custom range inputs with brass accent */
+input[type="range"] {
+  accent-color: var(--accent);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
